@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      اختبار مستوى إدمان التواصل الاجتماعي - بوابتك للتقليل من الإدمان
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="إدمان التواصل الاجتماعي، اختبار الإدمان، ألعاب ترفيهية، تقليل الإدمان"
+      name="keywords"
+    />
+    <meta
+      content="اكتشف كيفية تقليل إدمان وسائل التواصل الاجتماعي من خلال ألعاب ترفيهية واختبار مستوى الإدمان."
+      name="description"
+    />
+
+    <!-- فافيكون -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- خطوط جوجل ويب -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- يمكنك استخدام خطوط تدعم العربية هنا -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- أيقونات الخطوط -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- مكتبات CSS -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- ملف CSS المخصص لبوتستراب -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- ملف CSS للقالب -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- أنماط مخصصة -->
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: "Cairo", sans-serif;
+      }
+      .game-item {
+        color: #fff;
+      }
+      .game-wordle {
+        background-color: #6aaa64;
+      }
+      .game-duotrigordle {
+        background-color: #c9b458;
+      }
+      .game-quordle {
+        background-color: #f5793a;
+      }
+      .game-sudoku {
+        background-color: #4b8bbe;
+      }
+      .game-crossword {
+        background-color: #9b59b6;
+      }
+      .game-2048 {
+        background-color: #edc22e;
+      }
+      .game-mahjong {
+        background-color: #16a085;
+      }
+      .game-tetris {
+        background-color: #2980b9;
+      }
+      .game-chess {
+        background-color: #2c3e50;
+      }
+      .game-solitaire {
+        background-color: #27ae60;
+      }
+      .game-item i {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+      /* ألوان مخصصة للألعاب */
+      /* ... (أنماط الألعاب كما هي) ... */
+
+      /* أنماط للأقسام القابلة للطي */
+      .collapsible {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: right;
+        outline: none;
+        font-size: 18px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #ccc;
+      }
+
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- قسم التحميل -->
+    <div
+      id="spinner"
+      class="show bg-light position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="visually-hidden">جاري التحميل...</span>
+      </div>
+    </div>
+    <!-- نهاية قسم التحميل -->
+
+    <!-- بداية شريط التنقل -->
+    <div class="container-xxl position-relative p-0">
+      <nav
+        class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+      >
+        <a href="#" class="navbar-brand p-0">
+          <h1 class="m-0">تقليل ادمان برامج التواصل الاجتماعي</h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <!-- روابط شريط التنقل -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto py-0">
+            <a href="#" class="nav-item nav-link active">الرئيسية</a>
+            <a href="#games" class="nav-item nav-link">الألعاب</a>
+            <a href="#challenge" class="nav-item nav-link">التحدي</a>
+            <a href="#books" class="nav-item nav-link">الكتب</a>
+            <a
+              href="https://docs.google.com/forms/d/1j3PuVCffhSpmSKfxnHtrVGXa_MHsCjegYMVnDGB_pVA/viewform"
+              class="nav-item nav-link" target="_blank"
+              >اختبار الإدمان</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      
+    </div>
+    <!-- نهاية شريط التنقل -->
+<!-- بداية قسم البطل -->
+<div class="container-xxl bg-primary hero-header">
+  <div class="container px-lg-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="text-white mb-4 animated slideInDown">
+          اكتشف مدى إدمانك لوسائل التواصل الاجتماعي
+        </h1>
+        <p class="text-white pb-3 animated slideInDown">
+          اختبر نفسك وتعرف على طرق لتقليل الإدمان من خلال ألعاب ترفيهية.
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/1j3PuVCffhSpmSKfxnHtrVGXa_MHsCjegYMVnDGB_pVA/viewform"
+          class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" target="_blank"
+          >ابدأ الاختبار</a
+        >
+        <a
+          href="#games"
+          class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight"
+          >استكشف الألعاب</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- نهاية قسم البطل -->
+</div>
+<!-- نهاية شريط التنقل -->
+
+
+
+
+<!-- قسم كيفية الإقلاع عن وسائل التواصل الاجتماعي -->
+<div id="quit-social-media" class="container-xxl py-5">
+  <div class="container py-5 px-lg-5">
+    <div class="text-center">
+      <p class="section-title text-secondary">
+        <span></span>كيفية الإقلاع عن وسائل التواصل<span></span>
+      </p>
+      <h1 class="mb-5">استراتيجيات مستوحاة من كتاب "العادات الذرية"</h1>
+    </div>
+    <p>
+      الإقلاع عن وسائل التواصل الاجتماعي يمكن أن يكون تحديًا، ولكن مع
+      الاستراتيجيات الصحيحة، يمكن تحقيقه بالكامل. يقدم كتاب "العادات الذرية"
+      لجيمس كلير إطارًا قويًا لبناء عادات أفضل وكسر العادات غير المفيدة، بما
+      في ذلك الاستخدام المفرط لوسائل التواصل الاجتماعي.
+    </p>
+    <button class="collapsible">
+      1. اجعلها غير مرئية: إزالة الإغراءات
+    </button>
+    <div class="content">
+      <p>
+        نحن نتأثر ببيئتنا. إذا كنت تريد الإقلاع عن وسائل التواصل الاجتماعي،
+        اجعل الوصول إليها أصعب.
+      </p>
+      <ul>
+        <li>حذف التطبيقات من هاتفك لتقليل الوصول الفوري.</li>
+        <li>نقل التطبيقات إلى مجلدات مخفية أو الصفحة الأخيرة في هاتفك.</li>
+        <li>
+          استخدم أدوات حجب المواقع مثل StayFocusd أو Freedom للحد من الوصول
+          أثناء ساعات محددة.
+        </li>
+      </ul>
+      <blockquote>
+        "أنت لا ترتقي إلى مستوى أهدافك. أنت تنخفض إلى مستوى أنظمتك."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">
+      2. اجعلها غير جذابة: إعادة صياغة عقليتك
+    </button>
+    <div class="content">
+      <p>
+        لتقليل استخدامك، تحتاج إلى تغيير نظرتك لوسائل التواصل الاجتماعي.
+      </p>
+      <ul>
+        <li>
+          حدد السلبيات التي تسببها في حياتك، مثل ضياع الوقت أو التأثير على
+          صحتك النفسية.
+        </li>
+        <li>
+          ركز على الفوائد التي ستجنيها من تقليل الاستخدام، مثل زيادة
+          الإنتاجية وتحسين العلاقات.
+        </li>
+      </ul>
+      <blockquote>
+        "كل فعل تقوم به هو تصويت لنوع الشخص الذي ترغب في أن تصبحه."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">3. اجعلها صعبة: زيادة الاحتكاك</button>
+    <div class="content">
+      <p>
+        وسائل التواصل الاجتماعي مصممة لتكون سهلة الوصول. لجعل الإقلاع أسهل،
+        أضف بعض الصعوبات في الوصول إليها.
+      </p>
+      <ul>
+        <li>تسجيل الخروج بعد كل استخدام لإضافة خطوة إضافية قبل التصفح.</li>
+        <li>
+          استخدام هاتف بسيط بدون تطبيقات التواصل الاجتماعي لفترة محددة.
+        </li>
+        <li>إشراك صديق أو فرد من العائلة لمساعدتك على البقاء ملتزمًا.</li>
+      </ul>
+      <blockquote>
+        "العادات هي الفائدة المركبة للتحسين الذاتي."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">4. اجعلها غير مرضية: إضافة عواقب</button>
+    <div class="content">
+      <p>
+        وسائل التواصل الاجتماعي تسبب الإدمان لأنها توفر مكافآت فورية. لكسر
+        العادة، اجعلها أقل إرضاءً وأضف عواقب لاستخدامها.
+      </p>
+      <ul>
+        <li>
+          تحديد عقوبات، مثل التبرع لمؤسسة لا تدعمها إذا استخدمت وسائل
+          التواصل الاجتماعي.
+        </li>
+        <li>
+          استبدالها بمكافآت أفضل، مثل الاستمتاع بنشاط مفضل عند تجنبها.
+        </li>
+      </ul>
+      <blockquote>
+        "ما يتم مكافأته فورًا يتكرر. ما يتم معاقبته فورًا يتم تجنبه."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">5. استبدل العادة: املأ الفراغ</button>
+    <div class="content">
+      <p>
+        الإقلاع عن وسائل التواصل ليس فقط عن التوقف عن عادة، بل عن استبدالها
+        بشيء أكثر إرضاءً.
+      </p>
+      <ul>
+        <li>تعلم مهارة جديدة أو هواية.</li>
+        <li>قضاء وقت مع الأحباء وجهًا لوجه.</li>
+        <li>التركيز على النمو الشخصي من خلال القراءة أو التأمل.</li>
+      </ul>
+      <blockquote>
+        "العادات أسهل في البناء عندما تتناسب مع تدفق حياتك."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">6. تتبع تقدمك</button>
+    <div class="content">
+      <p>
+        أخيرًا، قياس جهودك لضمان النجاح على المدى الطويل. استخدم متتبع
+        العادات لمراقبة الأيام التي تتجنب فيها وسائل التواصل الاجتماعي
+        واحتفل بالإنجازات على طول الطريق.
+      </p>
+      <blockquote>
+        "القياس يوفر طريقة للتغلب على العمى تجاه سلوكياتنا وملاحظة ما يحدث
+        بالفعل."
+        <br />
+        <em>- جيمس كلير</em>
+      </blockquote>
+    </div>
+  
+    <button class="collapsible">الخلاصة</button>
+    <div class="content">
+      <p>
+        الإقلاع عن وسائل التواصل الاجتماعي لا يحدث بين ليلة وضحاها، ولكن
+        باتباع مبادئ "العادات الذرية"، يمكنك بناء نظام يدعم هدفك. تذكر،
+        التغييرات الصغيرة والمستمرة تؤدي إلى نتائج كبيرة مع مرور الوقت.
+      </p>
+      <p>اتخذ الخطوة الأولى اليوم. نفسك المستقبلية ستشكرك!</p>
+    </div>
+  </div>
+  </div>
+
+
+
+<!-- قسم التحدي لمدة 30 يوماً -->
+<div id="challenge" class="container-xxl py-5 bg-light">
+<div class="container py-5 px-lg-5">
+  <div class="text-center">
+    <p class="section-title text-secondary">
+      <span></span>التحدي لمدة 30 يوماً<span></span>
+    </p>
+    <h1 class="mb-5">ابدأ الآن لتقليل استخدام وسائل التواصل الاجتماعي</h1>
+  </div>
+  <p>
+    هل أنت مستعد لاستعادة وقتك وتركيزك؟ هذا التحدي مصمم لمساعدتك على إعادة
+    ضبط عاداتك، تقليل الاعتماد على وسائل التواصل الاجتماعي، وإعادة اكتشاف
+    متعة اللحظة الحالية. يتضمن كل يوم خطوة عملية محددة لتوجيهك في رحلتك.
+  </p>
+  <button class="collapsible">كيفية البدء</button>
+  <div class="content">
+    <ul>
+      <li>
+        <strong>الالتزام:</strong> قرر الالتزام بالتحدي لمدة 30 يومًا
+        كاملة.
+      </li>
+      <li>
+        <strong>تتبع تقدمك:</strong> استخدم مفكرة، تطبيق، أو تقويم لتسجيل
+        كل مهمة تكملها.
+      </li>
+      <li>
+        <strong>التأمل:</strong> اقضِ 5-10 دقائق يوميًا في التفكير في
+        شعورك بعد إكمال المهمة.
+      </li>
+    </ul>
+  </div>
+
+  <button class="collapsible">جدول التحدي لمدة 30 يومًا</button>
+  <div class="content">
+    <h3>الأسبوع الأول: الوعي والتحضير</h3>
+    <ul>
+      <li>
+        <strong>اليوم 1: إيقاف الإشعارات</strong>
+        <br />قم بإسكات جميع الإشعارات لتطبيقات التواصل الاجتماعي. ابدأ
+        بإنشاء مساحة لاستخدام متعمد.
+      </li>
+      <li>
+        <strong>اليوم 2: تحقق من وقت الشاشة</strong>
+        <br />راجع وقت الشاشة اليومي لديك لفهم أنماط استخدامك.
+      </li>
+      <li>
+        <strong>اليوم 3: حذف تطبيق تواصل اجتماعي واحد</strong>
+        <br />اختر تطبيقًا تستخدمه بشكل مفرط واحذفه لبقية التحدي.
+      </li>
+      <li>
+        <strong>اليوم 4: تحديد ساعات "بدون تواصل اجتماعي"</strong>
+        <br />حدد فترة زمنية (مثلًا من 7 مساءً حتى 7 صباحًا) تتجنب فيها
+        جميع وسائل التواصل الاجتماعي.
+      </li>
+      <li>
+        <strong>اليوم 5: استبدل التمرير بهواية</strong>
+        <br />اختر نشاطًا تستمتع به، مثل القراءة أو الرسم أو الطبخ، لتفعله
+        بدلًا من التمرير.
+      </li>
+      <li>
+        <strong>اليوم 6: إنشاء مساحة خالية من التواصل الاجتماعي</strong>
+        <br />خصص منطقة في منزلك (مثل غرفة النوم) كمنطقة خالية من وسائل
+        التواصل الاجتماعي.
+      </li>
+      <li>
+        <strong>اليوم 7: التأمل في الأسبوع</strong>
+        <br />اكتب ما تعلمته عن عاداتك وكيف تشعر حتى الآن.
+      </li>
+    </ul>
+
+    <h3>الأسبوع الثاني: بناء عادات جديدة</h3>
+    <ul>
+      <li>
+        <strong>اليوم 8: تحديد حد زمني يومي</strong>
+        <br />استخدم إعدادات هاتفك لتقييد استخدامك لوسائل التواصل
+        الاجتماعي إلى 30 دقيقة أو أقل يوميًا.
+      </li>
+      <li>
+        <strong>اليوم 9: تنظيف قائمة المتابعة</strong>
+        <br />ألغِ متابعة الحسابات التي لا تلهمك أو تثقيفك أو تجلب لك
+        السعادة.
+      </li>
+      <li>
+        <strong>اليوم 10: قضاء وقت في الهواء الطلق</strong>
+        <br />خذ نزهة لمدة 30 دقيقة أو اقضِ وقتًا في الطبيعة بدون هاتفك.
+      </li>
+      <li>
+        <strong>اليوم 11: تجربة صباح خالٍ من الأجهزة الرقمية</strong>
+        <br />ابدأ يومك دون التحقق من هاتفك أو وسائل التواصل الاجتماعي
+        للساعة الأولى.
+      </li>
+      <li>
+        <strong>اليوم 12: الاتصال بصديق</strong>
+        <br />استبدل التواصل عبر الإنترنت بمكالمة هاتفية أو لقاء شخصي.
+      </li>
+      <li>
+        <strong>اليوم 13: ممارسة الامتنان</strong>
+        <br />اكتب ثلاثة أشياء تشعر بالامتنان لها بدلًا من التمرير قبل
+        النوم.
+      </li>
+      <li>
+        <strong>اليوم 14: التأمل في الأسبوع الثاني</strong>
+        <br />لاحظ أي تغييرات في مزاجك أو إنتاجيتك أو علاقاتك.
+      </li>
+    </ul>
+
+    <h3>الأسبوع الثالث: تعزيز الالتزام</h3>
+    <ul>
+      <li>
+        <strong>اليوم 15: تحويل هاتفك إلى تدرج الرمادي</strong>
+        <br />اجعل هاتفك أقل جاذبية بصريًا عن طريق تحويله إلى وضع التدرج
+        الرمادي.
+      </li>
+      <li>
+        <strong>اليوم 16: تجنب وسائل التواصل أثناء الوجبات</strong>
+        <br />ركز على الأكل بوعي والاستمتاع بصحبة الآخرين.
+      </li>
+      <li>
+        <strong
+          >اليوم 17: استبدل وسائل التواصل الاجتماعي ببودكاست أو كتاب
+          صوتي</strong
+        >
+        <br />استمع إلى شيء ملهم أو تعليمي أثناء وقت التمرير المعتاد.
+      </li>
+      <li>
+        <strong>اليوم 18: كتابة عن محفزاتك لوسائل التواصل</strong>
+        <br />تأمل في ما يجعلك تلجأ إلى وسائل التواصل الاجتماعي وفكر في
+        بدائل.
+      </li>
+      <li>
+        <strong
+          >اليوم 19: التخطيط لعطلة نهاية أسبوع خالية من التواصل
+          الاجتماعي</strong
+        >
+        <br />استعد للابتعاد تمامًا عن وسائل التواصل الاجتماعي خلال عطلة
+        نهاية الأسبوع القادمة.
+      </li>
+      <li>
+        <strong>اليوم 20: كتابة أهدافك</strong>
+        <br />استخدم الوقت الذي توفره لوضع أهداف شخصية قصيرة وطويلة المدى.
+      </li>
+      <li>
+        <strong>اليوم 21: التأمل في الأسبوع الثالث</strong>
+        <br />فكر في كيفية قضاء وقتك وتأثير ذلك على رفاهيتك.
+      </li>
+    </ul>
+
+    <h3>الأسبوع الرابع: التعزيز والتغيير طويل الأمد</h3>
+    <ul>
+      <li>
+        <strong>اليوم 22: مشاركة تجربتك</strong>
+        <br />تحدث إلى شخص ما عن رحلتك أو اكتب عنها (بدون استخدام وسائل
+        التواصل الاجتماعي).
+      </li>
+      <li>
+        <strong>اليوم 23: تحديد أوقات محددة للتطبيقات</strong>
+        <br />استخدم وسائل التواصل الاجتماعي فقط خلال أوقات محددة مسبقًا
+        (مثلًا من 12 ظهرًا إلى 1 مساءً).
+      </li>
+      <li>
+        <strong>اليوم 24: قضاء وقت جودة مع الأحباء</strong>
+        <br />خطط لنشاط أو خروج مع العائلة أو الأصدقاء.
+      </li>
+      <li>
+        <strong>اليوم 25: استكشاف مهارة جديدة</strong>
+        <br />استخدم وقتك الحر لبدء تعلم شيء جديد، مثل لغة أو حرفة.
+      </li>
+      <li>
+        <strong>اليوم 26: التأمل في شعورك بدون وسائل التواصل</strong>
+        <br />اكتب ملاحظة قصيرة تقارن فيها كيف شعرت قبل بدء التحدي والآن.
+      </li>
+      <li>
+        <strong>اليوم 27: تشجيع صديق على الانضمام</strong>
+        <br />شارك فوائد تجربتك مع شخص آخر وادعه لتجربتها.
+      </li>
+      <li>
+        <strong>اليوم 28: التخطيط لأمسية خالية من وسائل التواصل</strong>
+        <br />اختم يومك دون التحقق من وسائل التواصل الاجتماعي، وركز بدلًا
+        من ذلك على الرعاية الذاتية أو الاسترخاء.
+      </li>
+      <li>
+        <strong>اليوم 29: إنشاء خطة طويلة الأمد</strong>
+        <br />قرر كيف ستدير وسائل التواصل الاجتماعي بعد التحدي، وضع حدودًا
+        واضحة.
+      </li>
+      <li>
+        <strong>اليوم 30: الاحتفال بنجاحك!</strong>
+        <br />كافئ نفسك لإكمال التحدي وفكر في كيفية تحسن حياتك.
+      </li>
+    </ul>
+  </div>
+
+  <button class="collapsible">الخطوات التالية</button>
+  <div class="content">
+    <p>
+      تهانينا على الوصول إلى نهاية التحدي! الآن، لقد بنيت عادات جديدة
+      وشعرت بفوائد تقليل استخدام وسائل التواصل الاجتماعي. استمر في الزخم
+      عن طريق دمج هذه الممارسات في روتينك اليومي.
+    </p>
+    <p>
+      تذكر، التقدم أهم من الكمال. التغييرات الصغيرة تؤدي إلى نتائج كبيرة.
+    </p>
+  </div>
+</div>
+</div>
+
+
+<!-- قسم الكتب الموصى بها -->
+<div id="books" class="container-xxl py-5 bg-light">
+<div class="container py-5 px-lg-5">
+  <div class="text-center">
+    <p class="section-title text-secondary">
+      <span></span>كتب مقترحة<span></span>
+    </p>
+    <h1 class="mb-5">
+      أفضل الكتب لتقليل إدمان التواصل الاجتماعي وبناء عادات أفضل
+    </h1>
+  </div>
+  <p>
+    كسر إدمان التواصل الاجتماعي وبناء عادات صحية يتطلب فهمًا لنفسك
+    وسلوكياتك وكيفية تأثير التكنولوجيا على حياتك. هذه الكتب تقدم رؤى
+    واستراتيجيات قيمة لمساعدتك على استعادة التحكم في وقتك وتركيزك.
+  </p>
+  <button class="collapsible">1. العادات الذرية - جيمس كلير</button>
+  <div class="content">
+    <p>
+      <strong>لماذا تقرأه؟</strong> هذا الكتاب هو حجر الأساس لأي شخص يسعى
+      لتغيير عاداته. يشرح جيمس كلير كيف يمكن للتغييرات الصغيرة والمستمرة
+      أن تؤدي إلى تحولات كبيرة في حياتك.
+    </p>
+    <p>
+      <strong>الفكرة الرئيسية:</strong> ركز على الأنظمة التي تدعم أهدافك،
+      وليس فقط على الأهداف نفسها. اجعل استخدام وسائل التواصل الاجتماعي
+      صعبًا وأقل مكافأة بينما تستبدله بعادات صحية.
+    </p>
+  </div>
+
+  <button class="collapsible">2. التقليل الرقمي - كال نيوبورت</button>
+  <div class="content">
+    <p>
+      <strong>لماذا تقرأه؟</strong> يستكشف هذا الكتاب كيفية تأثير
+      الاستخدام المفرط للتكنولوجيا على حياتنا ويقدم نصائح عملية لاستعادة
+      التركيز والتحكم.
+    </p>
+    <p>
+      <strong>الفكرة الرئيسية:</strong> ممارسة "التقليل الرقمي" عن طريق
+      الاحتفاظ فقط بالتكنولوجيا التي تخدم غرضًا واضحًا. استخدم استراتيجيات
+      مقصودة مثل إزالة السموم الرقمية لتقليل الاعتماد على وسائل التواصل
+      الاجتماعي.
+    </p>
+  </div>
+
+  <button class="collapsible">3. الضحالة - نيكولاس كار</button>
+  <div class="content">
+    <p>
+      <strong>لماذا تقرأه؟</strong> يستكشف كار كيف تقوم الإنترنت والشتات
+      الرقمي المستمر بإعادة تشكيل أدمغتنا، مما يؤثر على قدرتنا على التركيز
+      والتفكير العميق.
+    </p>
+    <p>
+      <strong>الفكرة الرئيسية:</strong> فهم كيفية تأثير وسائل التواصل
+      الاجتماعي على قدراتك الإدراكية واتخاذ خطوات لإعطاء الأولوية للأنشطة
+      التي تعزز التفكير العميق والوعي الذاتي.
+    </p>
+  </div>
+
+  <!-- أكمل بقية الكتب بنفس النمط -->
+</div>
+</div>
+
+    <!-- قسم الألعاب -->
+    <div id="games" class="container-xxl py-5">
+      <div class="container py-5 px-lg-5">
+        <div class="text-center">
+          <p class="section-title text-secondary"><span></span>ألعابنا<span></span></p>
+          <h1 class="mb-5">الألعاب المميزة</h1>
+        </div>
+        <div class="row g-4">
+          <!-- لعبة 1: ووردل -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="game-item game-wordle rounded text-center p-3">
+              <i class="fas fa-font"></i>
+              <h6 class="mb-2">ووردل</h6>
+              <p class="small">احزر الكلمة المخفية في ست محاولات. كلمة جديدة كل يوم!</p>
+              <a target = _blank href="https://www.nytimes.com/games/wordle/index.html" class="btn btn-light btn-sm mt-2">العب الآن</a>
+            </div>
+          </div>
+          <!-- لعبة 2: ديوتريجوردل -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="game-item game-duotrigordle rounded text-center p-3">
+              <i class="fas fa-th"></i>
+              <h6 class="mb-2">ديوتريجوردل</h6>
+              <p class="small">تحدى نفسك مع 32 لغز ووردل في وقت واحد!</p>
+              <a target = _blank href="https://duotrigordle.com/" class="btn btn-light btn-sm mt-2">العب الآن</a>
+            </div>
+          </div>
+          <!-- لعبة 3: كوردل -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="game-item game-quordle rounded text-center p-3">
+              <i class="fas fa-border-all"></i>
+              <h6 class="mb-2">كوردل</h6>
+              <p class="small">حل أربعة ألغاز ووردل في نفس الوقت. هل تستطيع ذلك؟</p>
+              <a target = _blank href="https://www.quordle.com/" class="btn btn-light btn-sm mt-2">العب الآن</a>
+            </div>
+          </div>
+          <!-- لعبة 4: سودوكو -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="game-item game-sudoku rounded text-center p-3">
+              <i class="fas fa-th-large"></i>
+              <h6 class="mb-2">سودوكو</h6>
+              <p class="small">املأ شبكة 9×9 بأرقام بحيث تحتوي كل صف وعمود ومربع على الأرقام من 1 إلى 9.</p>
+              <a href="https://sudoku.com/" target = _blank class="btn btn-light btn-sm mt-2">العب الآن</a>
+              
+            </div>
+          </div>
+          <!-- لعبة 5: الكلمات المتقاطعة اليومية -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="game-item game-crossword rounded text-center p-3">
+              <i class="fas fa-pencil-alt"></i>
+              <h6 class="mb-2">الكلمات المتقاطعة اليومية</h6>
+              <p class="small">استمتع بألغاز الكلمات المتقاطعة اليومية واختبر معرفتك.</p>
+              <a target = _blank href="https://www.dictionary.com/e/crossword/" class="btn btn-light btn-sm mt-2">العب الآن</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- قسم: قصة بول ميلر -->
+        <div id="paul-miller-story" class="container-xxl py-5 bg-light">
+          <div class="container py-5 px-lg-5">
+            <div class="text-center">
+              <p class="section-title text-secondary">
+                <span></span>قصة بول ميلر<span></span>
+              </p>
+              <h1 class="mb-5">عام بول ميلر بدون الإنترنت</h1>
+            </div>
+            <p>
+              بول ميلر، صحفي تقني في ذا فيرج، شعر بالإرهاق من المطالب المستمرة
+              لوسائل التواصل الاجتماعي والإنترنت. في عام 2012، وهو في سن 26 عامًا،
+              قرر القيام بتجربة جريئة: الانفصال تمامًا عن الإنترنت لمدة عام كامل.
+              كان هدفه هو رؤية كيف سيؤثر هذا التغيير الجذري على حياته وإنتاجيته
+              ورفاهيته الشخصية.
+            </p>
+            <p>
+              في الأول من مايو 2012، انفصل بول عن الشبكة. سلّم هاتفه الذكي، وتجنب
+              نقاط الاتصال اللاسلكية، وتوقف عن استخدام البريد الإلكتروني ووسائل
+              التواصل الاجتماعي وجميع خدمات الإنترنت. في البداية، كان التغيير
+              محررًا. بدون التنبيهات المستمرة، وجد مزيدًا من الوقت لقراءة الكتب،
+              والتواصل وجهًا لوجه، واستكشاف هوايات جديدة مثل ركوب الدراجات وعزف
+              الآلات الموسيقية.
+            </p>
+            <p>
+              تميزت الأشهر القليلة الأولى بزيادة الإبداع وشعور بالسلام. كتب بول
+              مقالات باستخدام آلة كاتبة وتواصل مع زملائه عبر الفاكس والمكالمات
+              الهاتفية. استمتع ببساطة روتينه الجديد وعمق تفاعلاته خارج الإنترنت.
+            </p>
+            <p>
+              مع مرور الوقت، ظهرت تحديات. بدأ بول يشعر بالعزلة. بدون وسائل التواصل
+              الاجتماعي، وجد صعوبة في متابعة الأصدقاء والعائلة. فاتته دعوات
+              للفعاليات، وشعر بأنه خارج الأحداث الجارية والمناقشات الثقافية.
+              مهنيًا، واجه عقبات في التعاون مع زملاء يعتمدون بشكل كبير على
+              التواصل الرقمي.
+            </p>
+            <p>
+              بحلول نهاية العام، توصل بول إلى إدراك عميق. على الرغم من أن للإنترنت
+              ووسائل التواصل الاجتماعي عيوبهما، إلا أنهما يقدمان أدوات لا تقدر
+              بثمن للاتصال وتبادل المعلومات. لم تكن المشكلة في التكنولوجيا نفسها،
+              بل في كيفية تعامله معها.
+            </p>
+            <p>
+              عندما أعاد الاتصال في الأول من مايو 2013، تبنى بول منظورًا جديدًا
+              تجاه الإنترنت. وضع حدودًا لنشاطاته عبر الإنترنت، مثل تحديد الوقت على
+              وسائل التواصل الاجتماعي والتركيز على التصفح الهادف. شارك بول
+              تجاربه في سلسلة من المقالات، مؤكدًا على أهمية الاستخدام الواعي
+              للإنترنت.
+            </p>
+            <p>
+              لاقت رحلته صدى لدى الكثيرين الذين يعانون من الحمل الرقمي الزائد.
+              توضح قصة بول أن تقليل إدمان وسائل التواصل الاجتماعي لا يعني بالضرورة
+              الانفصال التام، بل يتعلق بإنشاء علاقة متوازنة مع التكنولوجيا—
+              استخدامها لإثراء الحياة دون السماح لها بالسيطرة.
+            </p>
+            <p class="text-muted">
+              <strong>المصدر:</strong> ميلر، بول. "أنا ما زلت هنا: العودة عبر
+              الإنترنت بعد عام بدون الإنترنت." ذا فيرج، 1 مايو 2013.
+            </p>
+          </div>
+        </div>
+    
+    <!-- مكتبات JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+    <!-- بداية التذييل -->
+    <div class="container-fluid bg-primary text-light footer">
+      <div class="container py-4 px-lg-5">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- يمكنك إضافة محتوى التذييل هنا -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- نهاية التذييل -->
+
+    <!-- زر الرجوع إلى الأعلى -->
+    <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- مكتبات JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+
+    <!-- JavaScript الخاص بالقالب -->
+    <script src="js/main.js"></script>
+
+    <!-- JavaScript للأقسام القابلة للطي -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
